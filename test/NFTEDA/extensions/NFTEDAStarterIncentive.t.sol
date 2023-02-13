@@ -14,6 +14,7 @@ contract NFTEDAStarterIncentiveTest is NFTEDATest {
         auctionContract = new TestNFTEDAStarterIncentive(discount);
     }
 
+    /// @notice Test 
     function testEmitsSetCreatorDiscount() public {
         vm.expectEmit(false, false, false, true);
         emit SetAuctionCreatorDiscount(discount);

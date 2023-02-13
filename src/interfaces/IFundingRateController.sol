@@ -8,6 +8,8 @@ interface IFundingRateController {
     /// @param newTarget the new target value
     event UpdateTarget(uint256 newTarget);
 
+    /// @notice emmitted when funding period is set
+    /// @param fundingPeriod the new funding period
     event SetFundingPeriod(uint256 fundingPeriod);
 
     error AlreadyInitialized();
