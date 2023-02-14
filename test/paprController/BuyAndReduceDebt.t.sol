@@ -5,10 +5,10 @@ import {TickMath} from "fullrange/libraries/TickMath.sol";
 
 import {BasePaprControllerTest} from "./BasePaprController.ft.sol";
 import {IPaprController} from "../../src/interfaces/IPaprController.sol";
-import {PaprController} from "../../src/PaprController.sol";
 import {UniswapHelpers} from "../../src/libraries/UniswapHelpers.sol";
 
 contract BuyAndReduceDebt is BasePaprControllerTest {
+    /// @notice  
     function testBuyAndReduceSendsSwapProceedsToCaller() public {
         safeTransferReceivedArgs.swapParams = IPaprController.SwapParams({
             amount: debt,
@@ -19,6 +19,7 @@ contract BuyAndReduceDebt is BasePaprControllerTest {
             swapFeeBips: 0
         });
         vm.prank(borrower);
+        // Transfer collateral from borrower to the controller
         nft.safeTransferFrom(borrower, address(controller), collateralId, abi.encode(safeTransferReceivedArgs));
         // pick a payer who DOES not have papr. Tx would revert if papr wasn't sent to them
         address payer = address(333);

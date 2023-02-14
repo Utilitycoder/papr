@@ -3,7 +3,6 @@ pragma solidity ^0.8.17;
 
 import "forge-std/Test.sol";
 
-import {ERC20} from "solmate/tokens/ERC20.sol";
 import {TickMath} from "fullrange/libraries/TickMath.sol";
 import {IUniswapV3Pool} from "v3-core/contracts/interfaces/IUniswapV3Pool.sol";
 
@@ -12,7 +11,7 @@ import {ReservoirOracleUnderwriter} from "../../src/ReservoirOracleUnderwriter.s
 import {IPaprController} from "../../src/interfaces/IPaprController.sol";
 import {ReservoirOracleUnderwriter} from "../../src/ReservoirOracleUnderwriter.sol";
 import {TestERC721, ERC721} from "../mocks/TestERC721.sol";
-import {TestERC20} from "../mocks/TestERC20.sol";
+import {TestERC20, ERC20} from "../mocks/TestERC20.sol";
 import {MainnetForking} from "../base/MainnetForking.sol";
 import {UniswapForking} from "../base/UniswapForking.sol";
 import {OracleTest} from "../base/OracleTest.sol";
