@@ -11,3 +11,9 @@ remappings = [
     '@reservoir/=lib/oracle/contracts'
 ]
 fs_permissions = [{ access = "read", path = "./"}]
+
+[rpc_endpoints]
+mumbai = "{MUMBAI_RPC_URL}"
+
+[polygonscan]
+mumbai = { key = "{POLYGONSCAN_KEY}" }

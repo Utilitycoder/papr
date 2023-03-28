@@ -2,11 +2,9 @@
 pragma solidity ^0.8.17;
 
 import "forge-std/Script.sol";
-import {ERC20} from "solmate/tokens/ERC20.sol";
-import {ERC721} from "solmate/tokens/ERC721.sol";
 
 import {IPaprController} from "src/interfaces/IPaprController.sol";
-import {PaprController} from "src/PaprController.sol";
+import {ERC20, ERC721, PaprController} from "src/PaprController.sol";
 import "openzeppelin-contracts/utils/Strings.sol";
 import {Base} from "script/actions/Base.s.sol";
 

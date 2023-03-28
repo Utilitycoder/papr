@@ -8,7 +8,7 @@ import {IPaprController} from "../../src/interfaces/IPaprController.sol";
 import {UniswapHelpers} from "../../src/libraries/UniswapHelpers.sol";
 
 contract BuyAndReduceDebt is BasePaprControllerTest {
-    /// @notice  
+    /// @notice Test that caller receives proceed if buy and reduce is successful. 
     function testBuyAndReduceSendsSwapProceedsToCaller() public {
         safeTransferReceivedArgs.swapParams = IPaprController.SwapParams({
             amount: debt,
